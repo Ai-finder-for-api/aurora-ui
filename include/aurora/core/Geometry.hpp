@@ -32,6 +32,7 @@ struct Rect {
     int right() const { return x + w - 1; }
     int bottom() const { return y + h - 1; }
     Point center() const { return {x + w / 2, y + h / 2}; }
+    Point topLeft() const { return {x, y}; }
     Size size() const { return {w, h}; }
     bool contains(Point p) const { return p.x >= x && p.x < x + w && p.y >= y && p.y < y + h; }
     bool isEmpty() const { return w <= 0 || h <= 0; }
